@@ -1,15 +1,17 @@
 import random
 
 number = random.randrange(1, 100, 1)
-# print(number)
+print(number)
 
-while True:
+attempts = 5
+
+for i in range(0, attempts):
     user_input = input('Please enter a number: ')
     if user_input.isdigit():
-        if int(user_input) < 10 or int(user_input) > 100:
-            print('Its not a number btween 10-100')
-        continue
+        if int(user_input) != number:
+            print('Wrong!')
+        else:
+            break
     else:
         print('Its not a number!')
-        continue
-    break
+print('Correct!')
